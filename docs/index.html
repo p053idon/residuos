@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoPort – Dashboard Ambiental</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <h2 class="logo">🌿 EcoPort</h2>
+
+        <nav class="menu">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Geradores</a>
+            <a href="#">Resíduos</a>
+            <a href="#">Movimentações</a>
+            <a href="#">Destinação</a>
+            <a href="#">Relatórios</a>
+            <a href="#">Configurações</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="content">
+        <header class="header">
+            <button id="toggleSidebar" class="toggle-btn">☰</button>
+            <h1>Dashboard Ambiental</h1>
+            <p class="subtitle">Monitoramento geral dos resíduos do porto</p>
+        </header>
+
+        <!-- KPIS -->
+        <section class="kpis">
+            <div class="kpi-card">
+                <span class="kpi-label">Resíduos no mês</span>
+                <span class="kpi-value">152 t</span>
+            </div>
+
+            <div class="kpi-card">
+                <span class="kpi-label">Orgânicos</span>
+                <span class="kpi-value green">41 t</span>
+            </div>
+
+            <div class="kpi-card">
+                <span class="kpi-label">Oleosos</span>
+                <span class="kpi-value orange">32 t</span>
+            </div>
+
+            <div class="kpi-card">
+                <span class="kpi-label">Contaminados</span>
+                <span class="kpi-value red">79 t</span>
+            </div>
+        </section>
+
+        <!-- GRÁFICOS -->
+        <section class="charts-row">
+            <div class="chart-card">
+                <h3>Geração por tipo (mês)</h3>
+                <canvas id="chartTipos"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Destinação</h3>
+                <canvas id="chartDestino"></canvas>
+            </div>
+        </section>
+
+        <!-- TABELA -->
+        <section class="table-card">
+            <h3>Movimentações recentes</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Quantidade</th>
+                        <th>Transportador</th>
+                        <th>Destinação</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- preenchido pelo JS -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fallback */
+body { font-family: Inter, Arial, sans-serif; }

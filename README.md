@@ -1,2 +1,0 @@
-# residuos
-Página de Resíduos
